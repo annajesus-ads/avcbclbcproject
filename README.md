@@ -50,7 +50,7 @@ Para eliminar atributos compostos, redundâncias textuais e anomalias de inserç
 * **2FN (Dependência Funcional Total):** Validação da tabela associativa `Item_Vistoria` com chave primária composta (`id_vistoria`, `id_equipamento`), garantindo que conformidades, pendências e observações dependam integralmente de ambas as chaves.
 * **3FN (Eliminação de Dependências Transitivas):** Extração das tabelas secundárias `Categoria_Equipamento` (substituindo texto repetitivo em `Equipamento`) e `Perfil_Acesso` (desacoplando regras de permissão de `Profissional`).
 
-![DER Normalizado 3FN](der-normalizado.png.png)
+![DER Normalizado 3FN](der-normalizado-3fn.png.png)
 
 ---
 
