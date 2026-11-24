@@ -41,7 +41,7 @@ O **FireTrack** resolve esse cenário estruturando os dados em um modelo relacio
 ### 1. Versão Inicial (7 tabelas)
 Estruturada com as entidades principais (`Cliente`, `Edificação`, `Profissional`, `Processo`, `Equipamento`, `Vistoria`) e a tabela associativa `Item_Vistoria` para resolução do relacionamento `N:M` entre vistorias e equipamentos.
 
-![DER Inicial](docs/der-inicial.png.png)
+![DER Inicial](der-inicial.png.png)
 
 ### 2. Processo de Normalização (1FN, 2FN e 3FN)
 Para eliminar atributos compostos, redundâncias textuais e anomalias de inserção, atualização e exclusão, o modelo passou por revisão completa e foi consolidado em **9 tabelas**:
@@ -50,7 +50,7 @@ Para eliminar atributos compostos, redundâncias textuais e anomalias de inserç
 * **2FN (Dependência Funcional Total):** Validação da tabela associativa `Item_Vistoria` com chave primária composta (`id_vistoria`, `id_equipamento`), garantindo que conformidades, pendências e observações dependam integralmente de ambas as chaves.
 * **3FN (Eliminação de Dependências Transitivas):** Extração das tabelas secundárias `Categoria_Equipamento` (substituindo texto repetitivo em `Equipamento`) e `Perfil_Acesso` (desacoplando regras de permissão de `Profissional`).
 
-![DER Normalizado 3FN](docs/der-normalizado.png.png)
+![DER Normalizado 3FN](der-normalizado.png.png)
 
 ---
 
